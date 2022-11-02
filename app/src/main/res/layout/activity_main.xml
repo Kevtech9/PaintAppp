@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/toolbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/toolbar_background"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <ImageButton
+            android:id="@+id/purpleColor"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/purple_background" />
+
+        <ImageButton
+            android:id="@+id/blackColor"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/black_background" />
+
+        <ImageButton
+            android:id="@+id/greenColor"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/green_background" />
+
+        <ImageButton
+            android:id="@+id/whiteColor"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/white_background" />
+        <ImageButton
+            android:id="@+id/deleteline"
+            android:layout_width="60dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/ic_baseline_delete_sweep_24"/>
+
+    </LinearLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar">
+
+        <include layout="@layout/paint_view" />
+
+        <ImageButton
+            android:id="@+id/blueColor"
+            android:layout_width="40dp"
+            android:layout_height="50dp"
+            android:background="@drawable/blue_background" />
+        <com.google.android.gms.ads.AdView
+            xmlns:ads="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/adView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_alignParentBottom="true"
+            ads:adSize="BANNER"
+            ads:adUnitId="ca-app-pub-3940256099942544/6300978111">
+        </com.google.android.gms.ads.AdView>
+    </RelativeLayout>
+</RelativeLayout>
